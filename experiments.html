@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.addEventListener('load', function() {
+            let canvas = document.getElementById('canvas');
+            let context = canvas.getContext('2d');
+            context.fillStyle = 'pink';
+            context.fillRect(5, 50, 20, 80);
+        })
+    </script>
 </head>
 <body>
     <header>
@@ -17,7 +25,20 @@
             </ul>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <template>
+            <h1>Hi graders!</h1>
+            <p>This text will not show up on parse</p>
+        </template>
+        <audio src="santana.mp3" controls><strong>Browser does not support HTML5 audio element.</strong></audio>
+        <video width="300" controls >
+            <source src="jive.mp4" type="video/mp4">
+            <strong>Browser does not support HTML5 video element.</strong>
+        </video>
+        <canvas id="canvas" width="300" height="300">
+            <strong>Browser does not support canvas element.</strong>
+        </canvas>
+    </main>
     <footer>
         <address>
             <a href="mailto:cadiesparks@gmail.com">cadiesparks@gmail.com</a>
