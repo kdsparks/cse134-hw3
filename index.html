@@ -17,6 +17,14 @@
             context.fillRect(10, 30, 20, 40);
         })
     </script>
+    <script>
+        class HelloWorld extends HTMLElement {
+            connectedCallback() {
+                console.log("Hello World!");
+            }
+        }
+        customElements.define("hello-world", HelloWorld);
+    </script>
 </head>
 <body>
     <header>
@@ -41,16 +49,15 @@
             <svg width="200" height="300">
                 <polygon points="30,50 70,140 130,140 160,40" fill="orange"></polygon>
             </svg>
-            <figcaption><strong>Figure 2:</strong> Temporal distribution of productivity enhancement. The shaded region indicates the quantum coherence window. NOTE: The svg does not have to match the sample provided above.</figcaption>
+            <figcaption>Figure: Tom's Shapes</figcaption>
         </figure>
+        <hello-world></hello-world>
     </main>
     <footer>
-        <footer>
         <address>
             <a href="mailto:cadiesparks@gmail.com">cadiesparks@gmail.com</a>
             <a href="sitemap.html">Sitemap</a>
         </address>
-    </footer>
     </footer>
 </body>
 </html>
