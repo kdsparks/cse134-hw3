@@ -4,31 +4,8 @@
     <meta charset="UTF-8">
     <title>Cadie on the Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="eventual.css">
-    <style>
-        body {border: 2px dotted rgb(115, 155, 164);}
-    </style>
-    <script>
-        window.addEventListener('load', function() {
-            let canvas = document.getElementById('canvas');
-            let context = canvas.getContext('2d');
-            context.fillStyle = 'green';
-            context.fillRect(10, 30, 20, 40);
-        })
-    </script>
-    <script>
-        class HelloWorld extends HTMLElement {
-            connectedCallback() {
-                console.log("Hello World!");
-            }
-        }
-        customElements.define("hello-world", HelloWorld);
-    </script>
 </head>
 <body>
-    <noscript>
-        <p>Whoops your JavaScript is off! But no worries, this site works on just HTML.</p>
-    </noscript>
     <header>
         <nav>
             <ul>
@@ -43,18 +20,6 @@
     <main>
         <h1>Cadie Sparks</h1>
         <h2>Welcome to my site</h2>
-        <h3>Behold:</h3>
-        <canvas id="canvas" width="100" height="100">
-            <strong>Canvas Supporting Browser Required</strong>
-        </canvas>
-        <figure>
-            <svg width="200" height="300">
-                <polygon points="30,50 70,140 130,140 160,40" fill="orange"></polygon>
-            </svg>
-            <figcaption>Figure: Tom's Shapes</figcaption>
-        </figure>
-        <hello-world></hello-world>
-        <a href="experiments.html">Experiments page for graders</a>
     </main>
     <footer>
         <address>
