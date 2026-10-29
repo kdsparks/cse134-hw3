@@ -36,20 +36,25 @@
 }
 
 @layer layout {
-  /* */
+  /* Selects header, main, and footer elements that are children of body */
   body > :is(header, main, footer) {
     max-inline-size: var(--measure);
     margin-inline: auto;
     padding-inline: var(--space);
   }
 
-  /* */
+  /* Selects ul's that are descendants of nav's that are descendants of headers */
   header nav ul {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space);
     padding: 0;
     list-style: none;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-style: italic;
   }
 
   a:hover {
@@ -79,4 +84,10 @@
   @layer base {
     a { transition: color 0.2s; }
   }
+}
+
+@media screen and (max-width: 300px) {
+    h1 {
+        font-size: 2rem;
+    }
 }
