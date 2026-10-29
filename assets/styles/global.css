@@ -1,0 +1,82 @@
+@layer reset, base, layout;
+
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; }
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --text: hsl(160, 69%, 10%);
+    --surface: hsl(60, 22%, 96%);
+    --accent-dark: hsl(160, 53%, 21%);
+    --accent-light: hsla(161, 21%, 64%, 0.5);
+    --accent-two-dark: hsl(25, 77%, 10%);
+    --accent-two-light: hsla(25, 43%, 65%, 0.4);
+    --space: 1rem;
+    --measure: 65ch;
+    --footer-margin: 5rem;
+  }
+
+  body {
+    font: 1.2rem/1.5 "avenir next", sans-serif;
+    color: var(--text);
+    background: var(--surface);
+  }
+
+  :is(h1, h2) { line-height: 1.2; text-wrap: balance; }
+  a { color: var(--accent-dark); }
+
+  blockquote {
+    margin-inline: 0;
+    padding-inline-start: var(--space);
+    border-inline-start: 0.25em solid var(--accent-dark);
+  }
+}
+
+@layer layout {
+  /* */
+  body > :is(header, main, footer) {
+    max-inline-size: var(--measure);
+    margin-inline: auto;
+    padding-inline: var(--space);
+  }
+
+  /* */
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space);
+    padding: 0;
+    list-style: none;
+  }
+
+  a:hover {
+    color: var(--accent-two-dark);
+    background-color: var(--accent-light);
+  }
+
+  a:focus {
+    color: var(--accent-two-dark);
+    background-color: var(--accent-light);
+  }
+
+  footer {
+    margin-block-start: var(--footer-margin);
+  }
+
+  footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space);
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @layer base {
+    a { transition: color 0.2s; }
+  }
+}
